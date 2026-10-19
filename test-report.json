@@ -1,0 +1,379 @@
+[
+  {
+    "title": "Whole number input",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getNum(input)",
+          "32"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Decimal number input",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getNum(input)",
+          "3.2"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fractional input",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getNum(input)",
+          "0.5"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Fractional input with a decimal",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getNum(input)",
+          "1.8"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Double fraction error",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "isUndefined",
+        "args": [
+          "convertHandler.getNum(input)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Default to 1 when no numerical input is provided",
+    "context": " -> Unit Tests -> Function convertHandler.getNum(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getNum(input)",
+          "1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "For Each Valid Input Unit",
+    "context": " -> Unit Tests -> Function convertHandler.getUnit(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getUnit(ele)",
+          "output[index]"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Unknown Unit Input",
+    "context": " -> Unit Tests -> Function convertHandler.getUnit(input)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "isUndefined",
+        "args": [
+          "convertHandler.getUnit(input)"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "For Each Valid Input Unit",
+    "context": " -> Unit Tests -> Function convertHandler.getReturnUnit(initUnit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.getReturnUnit(ele)",
+          "expect[i]"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "For Each Valid Input Unit",
+    "context": " -> Unit Tests -> Function convertHandler.spellOutUnit(unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "convertHandler.spellOutUnit(ele)",
+          "expect[i]"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Gal to L",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "L to Gal",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Mi to Km",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Km to Mi",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Lbs to Kg",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Kg to Lbs",
+    "context": " -> Unit Tests -> Function convertHandler.convert(num, unit)",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "approximately",
+        "args": [
+          "convertHandler.convert(input[0], input[1])",
+          "expected",
+          "0.1"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Convert a valid input such as 10L: GET request to /api/convert",
+    "context": " -> Functional Tests -> Routing Tests -> GET /api/convert => conversion object",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.initNum",
+          "10"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.initUnit",
+          "'L'"
+        ]
+      },
+      {
+        "method": "approximately",
+        "args": [
+          "res.body.returnNum",
+          "2.64172",
+          "0.1"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.returnUnit",
+          "'gal'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Convert an invalid input such as 32g: GET request to /api/convert",
+    "context": " -> Functional Tests -> Routing Tests -> GET /api/convert => conversion object",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.text",
+          "'invalid unit'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Convert an invalid number such as 3/7.2/4kg: GET request to /api/convert",
+    "context": " -> Functional Tests -> Routing Tests -> GET /api/convert => conversion object",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.text",
+          "'invalid number'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Convert an invalid number AND unit such as 3/7.2/4kilomin: GET request to /api/convert",
+    "context": " -> Functional Tests -> Routing Tests -> GET /api/convert => conversion object",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.text",
+          "'invalid number and unit'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Convert with no number such as kg: GET request to /api/convert",
+    "context": " -> Functional Tests -> Routing Tests -> GET /api/convert => conversion object",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.initNum",
+          "1"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.initUnit",
+          "'kg'"
+        ]
+      },
+      {
+        "method": "approximately",
+        "args": [
+          "res.body.returnNum",
+          "2.20462",
+          "0.1"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.returnUnit",
+          "'lbs'"
+        ]
+      }
+    ]
+  }
+]

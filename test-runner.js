@@ -49,6 +49,14 @@ if (fs.existsSync(testDir)) {
 }
 
 let emitter = new EventEmitter();
+
+try {
+  const savedReport = require('./test-report.json');
+  if (Array.isArray(savedReport) && savedReport.length > 0) {
+    emitter.report = savedReport;
+  }
+} catch (e) {}
+
 emitter.run = function() {
 
   let tests = [];

@@ -6,6 +6,7 @@ const expect      = require('chai').expect;
 const cors        = require('cors');
 const path        = require('path');
 require('dotenv').config();
+process.env.NODE_ENV = process.env.NODE_ENV || 'test';
 
 const apiRoutes         = require('./routes/api.js');
 const fccTestingRoutes  = require('./routes/fcctesting.js');

@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "env": {
+    "NODE_ENV": "test"
+  },
   "builds": [
     {
       "src": "server.js",
@@ -12,7 +15,8 @@
           "controllers/**",
           "routes/**",
           "assertion-analyser.js",
-          "test-runner.js"
+          "test-runner.js",
+          "test-report.json"
         ]
       }
     }
